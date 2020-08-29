@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  margin: 20px;
 }
 
 textarea {
@@ -75,4 +76,14 @@ textarea {
 /* My Styling */
 hr {
   border-top: 3px solid #bbb;
+}
+
+.to-do {
+  background-color: #06AED5;
+}
+
+.time-of-day {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
