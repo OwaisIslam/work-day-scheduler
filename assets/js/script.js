@@ -3,6 +3,7 @@ var future_task_color = 'rgb(173,255,47,0.8)';
 
 var currentDate = moment().format('dddd, MMMM Do');
 $("#currentDay").text(currentDate);
+
 var timeSlots = $(".to-do").toArray();
 
 function setTimeSlotColors() {
@@ -15,5 +16,17 @@ function setTimeSlotColors() {
         }
     }
 }
+
+console.log($("#8-text").text());
+$("#8-text").text("goodbye");
+
+$(".to-do").on("click", function () {
+    console.log("CLICKED");
+    if ($(this).children().text() == "") {
+        $(this).children().text("hello");
+    } else {
+        $(this).children().text("");
+    }
+});
 
 setTimeSlotColors();

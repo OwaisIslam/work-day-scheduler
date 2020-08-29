@@ -74,8 +74,10 @@ textarea {
 
 
 /* My Styling */
-hr {
-  border-top: 3px solid #bbb;
+
+#currentDay {
+  font-size: 30px;
+  font-style: italic;
 }
 
 .time-of-day {
@@ -86,4 +88,11 @@ hr {
 
 .to-do {
   background-color: #C0C0C0;
+}
+
+.save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
 }
