@@ -78,12 +78,12 @@ hr {
   border-top: 3px solid #bbb;
 }
 
-.to-do {
-  background-color: #06AED5;
-}
-
 .time-of-day {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.to-do {
+  background-color: #C0C0C0;
 }
