@@ -17,13 +17,10 @@ function setTimeSlotColors() {
     }
 }
 
-console.log($("#8-text").text());
-$("#8-text").text("goodbye");
-
 $(".to-do").on("click", function () {
-    console.log($("#input-form"));
+    var formZoneID = "#input-form-" + ($(this)[0].id);
+    $(formZoneID)[0].style.visibility = "visible";
 
-    $("#input-form").css('visibility', 'visible');
     // console.log("CLICKED");
     // if ($(this).children().text() == "") {
     //     $(this).children().text("hello");
@@ -33,15 +30,12 @@ $(".to-do").on("click", function () {
 });
 
 $(".save-button").on("click", function () {
-    console.log($(this).parent().children(".to-do").children(".form-control").css("visibility"));
+    var currentTaskForm = $(this).parent().children(".to-do").children(".form-control")[0];
+    var currentP = $(this).parent().children(".to-do").children(".display-text")[0];
+    var taskDescription = currentTaskForm.value;
 
-    var currentToDo = $(this).parent().children(".to-do").children(".form-control");
-    console.log(currentToDo.hidden);
-    if (currentToDo.hidden == "false") {
-        console.log("visible");
-    } else {
-        console.log("hidden");
-    }
+    currentP.textContent = taskDescription;
+    $(this).parent().children(".to-do").children(".form-control")[0].style.visibility = "hidden";
 });
 
 setTimeSlotColors();
