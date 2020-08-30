@@ -21,11 +21,26 @@ console.log($("#8-text").text());
 $("#8-text").text("goodbye");
 
 $(".to-do").on("click", function () {
-    console.log("CLICKED");
-    if ($(this).children().text() == "") {
-        $(this).children().text("hello");
+    console.log($("#input-form"));
+
+    $("#input-form").css('visibility', 'visible');
+    // console.log("CLICKED");
+    // if ($(this).children().text() == "") {
+    //     $(this).children().text("hello");
+    // } else {
+    //     $(this).children().text("");
+    // }
+});
+
+$(".save-button").on("click", function () {
+    console.log($(this).parent().children(".to-do").children(".form-control").css("visibility"));
+
+    var currentToDo = $(this).parent().children(".to-do").children(".form-control");
+    console.log(currentToDo.hidden);
+    if (currentToDo.hidden == "false") {
+        console.log("visible");
     } else {
-        $(this).children().text("");
+        console.log("hidden");
     }
 });
 

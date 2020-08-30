@@ -87,6 +87,7 @@ textarea {
 }
 
 .to-do {
+  display: flex;
   background-color: #C0C0C0;
 }
 
@@ -95,4 +96,13 @@ textarea {
   justify-content: center;
   align-items: center;
   background-color: lightskyblue;
+  margin-left: 1px;
+}
+
+.form-control {
+  visibility: hidden;
+}
+
+#nope {
+  background-color: red;
 }
