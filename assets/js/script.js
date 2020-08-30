@@ -18,24 +18,22 @@ function setTimeSlotColors() {
 }
 
 $(".to-do").on("click", function () {
+    $(".form-control").each(function (index, element) {
+        element.style.visibility = "hidden";
+    })
+
     var formZoneID = "#input-form-" + ($(this)[0].id);
     $(formZoneID)[0].style.visibility = "visible";
-
-    // console.log("CLICKED");
-    // if ($(this).children().text() == "") {
-    //     $(this).children().text("hello");
-    // } else {
-    //     $(this).children().text("");
-    // }
 });
 
 $(".save-button").on("click", function () {
     var currentTaskForm = $(this).parent().children(".to-do").children(".form-control")[0];
+
     var currentP = $(this).parent().children(".to-do").children(".display-text")[0];
     var taskDescription = currentTaskForm.value;
 
     currentP.textContent = taskDescription;
-    $(this).parent().children(".to-do").children(".form-control")[0].style.visibility = "hidden";
+    currentTaskForm.style.visibility = "hidden";
 });
 
 setTimeSlotColors();
