@@ -60,11 +60,15 @@ textarea {
 }
 
 .saveBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  opacity: 0.7;
 }
 
 .saveBtn i:hover {
@@ -74,7 +78,6 @@ textarea {
 
 
 /* My Styling */
-
 #currentDay {
   font-size: 30px;
   font-style: italic;
@@ -88,20 +91,11 @@ textarea {
 
 .to-do {
   display: flex;
-  background-color: #C0C0C0;
+  background-color: #d3d3d3;
 }
 
 .display-text {
   margin-top: 10px;
-}
-
-.save-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightskyblue;
-  margin-left: 1px;
-  opacity: 0.7;
 }
 
 .form-control {

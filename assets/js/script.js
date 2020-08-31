@@ -1,5 +1,5 @@
-var current_task_color = 'rgb(220,20,60,0.8)';
-var future_task_color = 'rgb(173,255,47,0.8)';
+var current_task_color = '#ff6961';
+var future_task_color = '#77dd77';
 
 var currentDate = moment().format('dddd, MMMM Do');
 $("#currentDay").text(currentDate);
@@ -7,9 +7,10 @@ $("#currentDay").text(currentDate);
 var tasks = JSON.parse(localStorage.getItem("tasks"));
 var timeSlots = $(".to-do").toArray();
 
-
+// This function is checking to see whether time blocks are in the past, present, or future.
 function setTimeSlotColors() {
     var currentTime = moment().format('kk');
+
     for (var i = 0; i < timeSlots.length; i++) {
         if (parseInt(timeSlots[i].id) == (currentTime)) {
             timeSlots[i].style.backgroundColor = current_task_color;
