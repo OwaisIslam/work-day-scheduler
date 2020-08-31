@@ -20,6 +20,7 @@ function setTimeSlotColors() {
     }
 }
 
+// This function loads any saved tasks from storage.
 function getStoredTasks() {
     if (localStorage.getItem("tasks") === null) {
         tasks = [];
